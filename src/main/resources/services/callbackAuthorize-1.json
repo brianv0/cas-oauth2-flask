@@ -1,0 +1,7 @@
+{
+  "@class" : "org.apereo.cas.support.oauth.services.OAuthCallbackAuthorizeService",
+  "id" : 1,
+  "name": "HTTP",
+  "description": "oauth wrapper callback url",
+  "serviceId" : "http://localhost:8081/oauth2.0/callbackAuthorize.*"
+}
