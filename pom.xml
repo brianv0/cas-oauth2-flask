@@ -10,6 +10,11 @@
     <name>CAS Pac4J / OAuth server demo</name>
     <description>CAS Pac4J / OAuth server demo</description>
 
+    <properties>
+        <cas.version>5.0.0.RC1</cas.version>
+        <java.version>1.8</java.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.apereo.cas</groupId>
@@ -34,7 +39,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <configuration>
-                    <warName>cas2</warName>
+                    <warName>cas</warName>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                     <recompressZippedFiles>false</recompressZippedFiles>
                     <archive>
@@ -58,7 +63,7 @@
                 </configuration>
             </plugin>
         </plugins>
-        <finalName>cas2</finalName>
+        <finalName>cas</finalName>
     </build>
 
 </project>
