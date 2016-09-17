@@ -1,5 +1,9 @@
 from flask import Flask, redirect, url_for, session, request
-from flask_oauth import OAuth
+
+import os 
+os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
+
+from flask_oauthlib.client import OAuth
 
 SECRET_KEY = 'developm'
 DEBUG = True
@@ -20,12 +24,11 @@ oauth = OAuth()
 
 oauth_generic = oauth.remote_app('generic',
     base_url=OAUTH_URL,
+    request_token_params=None,
     request_token_url=None,
-
     authorize_url=OAUTH_AUTHORIZE_URL,
 
     access_token_url=OAUTH_ACCESS_URL,
-    access_token_params={'grant_type': 'authorization_code'},
 
     consumer_key=OAUTH_CLIENT_ID,
     consumer_secret=OAUTH_CLIENT_SECRET,
@@ -56,8 +59,9 @@ def oauth_authorized(resp):
     session['oauth_token'] = (resp['access_token'], '')
 
     if OAUTH_MORE:
-        me = oauth_generic.get(OAUTH_MORE)
-        return str(me)
+        me = oauth_generic.get(OAUTH_MORE + "?access_token=" + session['oauth_token'][0])
+        print me.data
+        return str(me.data)
     return "Success"
 
 @oauth_generic.tokengetter
