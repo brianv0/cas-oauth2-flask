@@ -1,28 +1,13 @@
 {
   "@class" : "org.apereo.cas.support.oauth.services.OAuthRegisteredService",
   "serviceId" : "http://localhost:5000/login/authorized",
-  "name" : "my great webapp for OAuth",
-  "id" : 11,
-  "description" : "The greatest application ever!",
   "clientId" : "this_is_the_key",
   "clientSecret" : "this_is_the_secret",
-  "proxyPolicy" : {
-    "@class" : "org.apereo.cas.services.RefuseRegisteredServiceProxyPolicy"
-  },
+  "bypassApprovalPrompt": false,
+  "serviceId" : "http://localhost:5000/.*",
+  "name" : "my great webapp for OAuth",
+  "id" : 11,
   "usernameAttributeProvider" : {
     "@class" : "org.apereo.cas.services.DefaultRegisteredServiceUsernameProvider"
-  },
-  "attributeReleasePolicy" : {
-    "@class" : "org.apereo.cas.services.ReturnAllAttributeReleasePolicy",
-    "principalAttributesRepository" : {
-      "@class" : "org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository"
-    },
-    "authorizedToReleaseCredentialPassword" : false,
-    "authorizedToReleaseProxyGrantingTicket" : false
-  },
-  "accessStrategy" : {
-    "@class" : "org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy",
-    "enabled" : true,
-    "ssoEnabled" : true
   }
 }
