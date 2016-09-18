@@ -1,10 +1,9 @@
 {
   "@class" : "org.apereo.cas.support.oauth.services.OAuthRegisteredService",
-  "serviceId" : "http://localhost:5000/login/authorized",
+  "serviceId" : "http://.*",
   "clientId" : "this_is_the_key",
   "clientSecret" : "this_is_the_secret",
   "bypassApprovalPrompt": false,
-  "serviceId" : "http://localhost:5000/.*",
   "name" : "my great webapp for OAuth",
   "id" : 11,
   "usernameAttributeProvider" : {
