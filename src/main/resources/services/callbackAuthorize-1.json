@@ -3,5 +3,5 @@
   "id" : 1,
   "name": "HTTP",
   "description": "oauth wrapper callback url",
-  "serviceId" : "http://localhost:8081/cas/oauth2.0/callbackAuthorize.*"
+  "serviceId" : "http://localhost:8080/cas/oauth2.0/callbackAuthorize.*"
 }
