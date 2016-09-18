@@ -11,7 +11,7 @@ DEBUG = True
 OAUTH_CLIENT_ID = 'this_is_the_key'
 OAUTH_CLIENT_SECRET = 'this_is_the_secret'
 
-OAUTH_URL = 'http://localhost:8081'
+OAUTH_URL = 'http://localhost:8080'
 OAUTH_AUTHORIZE_URL = '/cas/oauth2.0/authorize'
 OAUTH_ACCESS_URL = '/cas/oauth2.0/accessToken'
 OAUTH_MORE = '/cas/oauth2.0/profile'
